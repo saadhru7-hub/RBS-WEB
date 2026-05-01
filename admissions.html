@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions - Redbridge Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .content { max-width: 1400px; margin: 0 auto; padding: 3rem 2rem; }
+        .page-header { background: linear-gradient(135deg, #DC143C 0%, #B22222 100%); color: white; padding: 4rem 2rem; text-align: center; }
+        .page-header h1 { font-size: 3rem; margin-bottom: 1rem; font-weight: 900; }
+        .section { margin-bottom: 3rem; padding: 2.5rem; background: #F5F7FA; border-radius: 15px; }
+        .section h2 { color: #DC143C; font-size: 2rem; margin-bottom: 1rem; }
+        .section p { color: #555; line-height: 1.8; margin-bottom: 1rem; }
+        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .step { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); border-left: 4px solid #DC143C; }
+        .step h3 { color: #DC143C; margin-bottom: 1rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: #DC143C; text-decoration: none; font-weight: 700; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">REDBRIDGE</div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <nav id="navbar">
+                <ul id="navMenu">
+                    <li><a href="index.html">About Us</a><ul class="dropdown"><li><a href="about-us.html">About</a></li></ul></li>
+                    <li><a href="academics.html">Academics</a><ul class="dropdown"><li><a href="academics.html">Overview</a></li></ul></li>
+                    <li><a href="divisions.html">Divisions</a><ul class="dropdown"><li><a href="divisions.html#primary">Primary</a></li></ul></li>
+                    <li><a href="student-life.html">Student Life</a><ul class="dropdown"><li><a href="student-life.html">Overview</a></li></ul></li>
+                    <li><a href="admissions.html">Admissions</a><ul class="dropdown"><li><a href="admissions.html">Process</a></li><li><a href="admissions.html#fees">Fees</a></li></ul></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="btn-enquiry">ENQUIRY</button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <h1>Admissions</h1>
+        <p>Join the Redbridge Community</p>
+    </div>
+
+    <div class="content">
+        <a href="index.html" class="back-link">← Back to Home</a>
+
+        <div class="section">
+            <h2>Admissions Process</h2>
+            <p>We welcome families interested in exploring Redbridge Academy. Our admissions process is designed to find students who will thrive in our community and benefit from our programs. We assess academic readiness, character, and potential for growth.</p>
+            <div class="steps">
+                <div class="step">
+                    <h3>1. Enquiry</h3>
+                    <p>Contact our admissions team to learn more about Redbridge and schedule a campus tour.</p>
+                </div>
+                <div class="step">
+                    <h3>2. Application</h3>
+                    <p>Submit the application form with required documents and student information.</p>
+                </div>
+                <div class="step">
+                    <h3>3. Assessment</h3>
+                    <p>Participate in entrance examinations and interviews appropriate for your grade level.</p>
+                </div>
+                <div class="step">
+                    <h3>4. Decision</h3>
+                    <p>Receive admissions decision and begin preparations for enrollment.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="requirements">
+            <h2>Application Requirements</h2>
+            <ul style="margin-left: 2rem; line-height: 2; color: #555;">
+                <li>Completed application form</li>
+                <li>Previous school transcripts and report cards</li>
+                <li>Standardized test scores (if applicable)</li>
+                <li>Teacher recommendations</li>
+                <li>Student essay and parent statement</li>
+                <li>Entrance assessments in Math and English</li>
+                <li>Personal interview with admissions staff</li>
+            </ul>
+        </div>
+
+        <div class="section" id="fees">
+            <h2>School Fees</h2>
+            <p>Our tuition reflects the quality of education and services provided at Redbridge Academy. We offer a range of payment options to meet family needs. Financial assistance is available for qualified families based on demonstrated need.</p>
+            <p><strong>2024-2025 Tuition (approximate):</strong> Contact admissions for detailed fee structure by division and current rates.</p>
+            <p style="margin-top: 2rem; color: #DC143C; font-weight: 700;">Please contact our admissions office for current fee information and financial assistance opportunities.</p>
+        </div>
+
+        <div class="section" id="faqs">
+            <h2>Frequently Asked Questions</h2>
+            <p><strong>Q: When is the admissions deadline?</strong><br>A: Rolling admissions. Spots fill throughout the year, so early application is recommended.</p>
+            <p><strong>Q: Do you offer financial aid?</strong><br>A: Yes, we offer need-based financial assistance. Contact admissions for details.</p>
+            <p><strong>Q: Can I schedule a campus tour?</strong><br>A: Absolutely! Tours are available year-round. Contact us to schedule.</p>
+            <p><strong>Q: What is your international student policy?</strong><br>A: We welcome international families. Visa support available when applicable.</p>
+        </div>
+
+        <div class="section" id="contact">
+            <h2>Contact Admissions</h2>
+            <p><strong>Redbridge Academy Admissions Office</strong><br>
+            Email: <a href="mailto:admissions@redbridge.uz" style="color: #DC143C;">admissions@redbridge.uz</a><br>
+            Phone: <a href="tel:+998712345678" style="color: #DC143C;">+998 (71) 234-5678</a><br>
+            Location: Tashkent, Uzbekistan</p>
+            <p style="margin-top: 1.5rem;"><button class="btn-enquiry" style="margin: 0;">REQUEST INFORMATION</button></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section"><h4>Admissions</h4><ul><li><a href="admissions.html">Process</a></li><li><a href="admissions.html#fees">Fees</a></li></ul></div>
+                <div class="footer-section"><h4>Contact</h4><ul><li><a href="mailto:info@redbridge.uz">info@redbridge.uz</a></li><li><a href="tel:+998712345678">+998 (71) 234-5678</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2024 Redbridge Academy</p></div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menuToggle').addEventListener('click', () => {
+            document.getElementById('navMenu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

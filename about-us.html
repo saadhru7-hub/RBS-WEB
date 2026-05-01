@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Redbridge Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #DC143C 0%, #B22222 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 900;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        .section-block {
+            margin-bottom: 4rem;
+            padding: 3rem;
+            background: #F5F7FA;
+            border-radius: 15px;
+        }
+
+        .section-block h2 {
+            color: #DC143C;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 900;
+        }
+
+        .section-block p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .values-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .value-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .value-item h3 {
+            color: #DC143C;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #DC143C;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .back-link:hover {
+            color: #B22222;
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .content {
+                padding: 1.5rem;
+            }
+
+            .section-block {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER & NAVIGATION (Same as index) -->
+    <header>
+        <div class="header-container">
+            <div class="logo">REDBRIDGE</div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <nav id="navbar">
+                <ul id="navMenu">
+                    <li>
+                        <a href="index.html">About Us</a>
+                        <ul class="dropdown">
+                            <li><a href="about-us.html">About Redbridge</a></li>
+                            <li><a href="about-us.html#mission">Our Mission</a></li>
+                            <li><a href="about-us.html#values">Our Values</a></li>
+                            <li><a href="about-us.html#leadership">Leadership</a></li>
+                            <li><a href="about-us.html#accreditations">Accreditations</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="academics.html">Academics</a>
+                        <ul class="dropdown">
+                            <li><a href="academics.html">Overview</a></li>
+                            <li><a href="academics.html#curriculum">Curriculum</a></li>
+                            <li><a href="academics.html#programs">Special Programs</a></li>
+                            <li><a href="academics.html#faculty">Faculty</a></li>
+                            <li><a href="academics.html#results">Results</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="divisions.html">Divisions</a>
+                        <ul class="dropdown">
+                            <li><a href="divisions.html#primary">Primary School</a></li>
+                            <li><a href="divisions.html#lower">Lower School</a></li>
+                            <li><a href="divisions.html#middle">Middle School</a></li>
+                            <li><a href="divisions.html#upper">Upper School</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="student-life.html">Student Life</a>
+                        <ul class="dropdown">
+                            <li><a href="student-life.html">Overview</a></li>
+                            <li><a href="student-life.html#activities">Activities</a></li>
+                            <li><a href="student-life.html#athletics">Athletics</a></li>
+                            <li><a href="student-life.html#arts">Arts</a></li>
+                            <li><a href="student-life.html#community">Community</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="admissions.html">Admissions</a>
+                        <ul class="dropdown">
+                            <li><a href="admissions.html">Process</a></li>
+                            <li><a href="admissions.html#requirements">Requirements</a></li>
+                            <li><a href="admissions.html#fees">School Fees</a></li>
+                            <li><a href="admissions.html#faqs">FAQs</a></li>
+                            <li><a href="admissions.html#contact">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <button class="btn-enquiry" onclick="alert('Enquiry Form Coming Soon')">ENQUIRY</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <h1>About Redbridge Academy</h1>
+        <p>A Legacy of Excellence and Character Development</p>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+        <a href="index.html" class="back-link">← Back to Home</a>
+
+        <div class="section-block" id="mission">
+            <h2>Our Mission</h2>
+            <p>Redbridge Academy inspires transformative learning through meaningful relationships, academic excellence, and unique opportunities. We are committed to developing well-rounded students who think critically, express themselves creatively, and lead with integrity.</p>
+            <p>At Redbridge, we believe in educating the whole child—mind, heart, and character. Our faculty are dedicated educators who develop close relationships with students and help each one reach their full potential and become confident leaders.</p>
+        </div>
+
+        <div class="section-block" id="values">
+            <h2>Our Core Values</h2>
+            <div class="values-showcase">
+                <div class="value-item">
+                    <h3>Excellence</h3>
+                    <p>We pursue the highest standards in all endeavors. Our faculty demonstrate excellence in teaching, and we challenge every student to reach their full potential academically and personally.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Community</h3>
+                    <p>Strong relationships and community are vital. Redbridge is known for its vibrant, supportive atmosphere where students are encouraged to express themselves and connect with others.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Integrity</h3>
+                    <p>Every student should have a strong sense of personal honor. Our Honor Code is the foundation for conduct and a primary building block of our school community.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Innovation</h3>
+                    <p>We embrace continuous innovation. Our curriculum blends classical foundations with cutting-edge technology and experiences that fuel creativity and collaborative problem-solving.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Diversity</h3>
+                    <p>We celebrate diversity and foster an inclusive environment. Students from varied backgrounds enrich our community and expand each other's perspectives.</p>
+                </div>
+                <div class="value-item">
+                    <h3>Character</h3>
+                    <p>Beyond academics, we develop character. Leadership development, service opportunities, and mentorship programs help students become responsible global citizens.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-block" id="leadership">
+            <h2>School Leadership</h2>
+            <p><strong>Head of School:</strong> Our Head of School brings decades of experience in education and a passion for student-centered learning. Leading a team of dedicated administrators and educators, they set the vision for academic excellence and community building at Redbridge.</p>
+            <p><strong>Senior Leadership Team:</strong> Our experienced team of division heads, curriculum directors, and counselors work collaboratively to support student success across all grades. Each member brings expertise in their respective areas and a commitment to fostering a supportive learning environment.</p>
+            <p><strong>Faculty:</strong> Redbridge's greatest asset is our faculty. Our teachers are subject matter experts, experienced educators, and caring mentors who know their students well and invest in their success.</p>
+        </div>
+
+        <div class="section-block" id="accreditations">
+            <h2>Accreditations & Recognition</h2>
+            <p>Redbridge Academy is proud to maintain accreditation from leading international educational organizations, ensuring our curriculum and standards meet global benchmarks for excellence.</p>
+            <ul style="margin-left: 2rem; color: #555; line-height: 2;">
+                <li><strong>International Baccalaureate (IB):</strong> Authorized provider of the IB Diploma Programme</li>
+                <li><strong>Cambridge Assessment:</strong> Authorized center for Cambridge IGCSE and A-Levels</li>
+                <li><strong>Council of International Schools (CIS):</strong> Accredited member</li>
+                <li><strong>NAIS:</strong> Member of National Association of Independent Schools</li>
+            </ul>
+        </div>
+
+        <div class="section-block">
+            <h2>By The Numbers</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div style="text-align: center;">
+                    <p style="font-size: 2.5rem; color: #DC143C; font-weight: 900;">40+</p>
+                    <p>Years of Excellence</p>
+                </div>
+                <div style="text-align: center;">
+                    <p style="font-size: 2.5rem; color: #DC143C; font-weight: 900;">98%</p>
+                    <p>College Acceptance Rate</p>
+                </div>
+                <div style="text-align: center;">
+                    <p style="font-size: 2.5rem; color: #DC143C; font-weight: 900;">15:1</p>
+                    <p>Student-Teacher Ratio</p>
+                </div>
+                <div style="text-align: center;">
+                    <p style="font-size: 2.5rem; color: #DC143C; font-weight: 900;">50+</p>
+                    <p>Clubs & Activities</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="divisions.html">Divisions</a></li>
+                        <li><a href="student-life.html">Student Life</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Admissions</h4>
+                    <ul>
+                        <li><a href="admissions.html">Apply Now</a></li>
+                        <li><a href="admissions.html#requirements">Requirements</a></li>
+                        <li><a href="admissions.html#fees">School Fees</a></li>
+                        <li><a href="admissions.html">Schedule Visit</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:info@redbridge.uz">info@redbridge.uz</a></li>
+                        <li><a href="tel:+998712345678">+998 (71) 234-5678</a></li>
+                        <li>Tashkent, Uzbekistan</li>
+                        <li><a href="contact.html">Contact Form</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">School Calendar</a></li>
+                        <li><a href="news.html">News & Events</a></li>
+                        <li><a href="#">Parent Portal</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Redbridge Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

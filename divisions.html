@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisions - Redbridge Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .content { max-width: 1400px; margin: 0 auto; padding: 3rem 2rem; }
+        .page-header { background: linear-gradient(135deg, #DC143C 0%, #B22222 100%); color: white; padding: 4rem 2rem; text-align: center; }
+        .page-header h1 { font-size: 3rem; margin-bottom: 1rem; font-weight: 900; }
+        .division { margin-bottom: 4rem; padding: 2.5rem; background: #F5F7FA; border-radius: 15px; }
+        .division h2 { color: #DC143C; font-size: 2rem; margin-bottom: 1rem; }
+        .division p { color: #555; line-height: 1.8; margin-bottom: 1rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: #DC143C; text-decoration: none; font-weight: 700; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">REDBRIDGE</div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <nav id="navbar">
+                <ul id="navMenu">
+                    <li><a href="index.html">About Us</a><ul class="dropdown"><li><a href="about-us.html">About</a></li><li><a href="about-us.html#mission">Mission</a></li><li><a href="about-us.html#values">Values</a></li></ul></li>
+                    <li><a href="academics.html">Academics</a><ul class="dropdown"><li><a href="academics.html">Overview</a></li><li><a href="academics.html#curriculum">Curriculum</a></li><li><a href="academics.html#programs">Programs</a></li></ul></li>
+                    <li><a href="divisions.html">Divisions</a><ul class="dropdown"><li><a href="divisions.html#primary">Primary</a></li><li><a href="divisions.html#lower">Lower</a></li><li><a href="divisions.html#middle">Middle</a></li><li><a href="divisions.html#upper">Upper</a></li></ul></li>
+                    <li><a href="student-life.html">Student Life</a><ul class="dropdown"><li><a href="student-life.html">Overview</a></li><li><a href="student-life.html#athletics">Athletics</a></li><li><a href="student-life.html#arts">Arts</a></li></ul></li>
+                    <li><a href="admissions.html">Admissions</a><ul class="dropdown"><li><a href="admissions.html">Process</a></li><li><a href="admissions.html#fees">Fees</a></li></ul></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="btn-enquiry">ENQUIRY</button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <h1>School Divisions</h1>
+        <p>Tailored education for every stage of growth</p>
+    </div>
+
+    <div class="content">
+        <a href="index.html" class="back-link">← Back to Home</a>
+
+        <div class="division" id="primary">
+            <h2>Primary School (Ages 5-11)</h2>
+            <p>Our Primary School program builds strong academic foundations while nurturing curiosity and creativity. We focus on literacy, numeracy, and science through engaging, hands-on learning experiences.</p>
+            <p><strong>Key Features:</strong> Small class sizes, play-based learning, specialist subjects, individual attention, character development, arts and music integration</p>
+        </div>
+
+        <div class="division" id="lower">
+            <h2>Lower School (Ages 11-14)</h2>
+            <p>Lower School is a time of academic growth and social development. Students deepen subject knowledge while developing research, analytical, and communication skills essential for success.</p>
+            <p><strong>Key Features:</strong> Subject specialization, team mentoring, leadership opportunities, extracurricular enrichment, social-emotional learning, community service</p>
+        </div>
+
+        <div class="division" id="middle">
+            <h2>Middle School (Ages 14-16)</h2>
+            <p>Middle School students engage with Cambridge IGCSE curriculum, preparing them for university-level work. We support their growing independence while maintaining strong pastoral care and guidance.</p>
+            <p><strong>Key Features:</strong> Cambridge IGCSE, subject choice flexibility, university preparation, leadership roles, advanced projects, mentorship</p>
+        </div>
+
+        <div class="division" id="upper">
+            <h2>Upper School (Ages 16-18)</h2>
+            <p>Our Upper School offers the IB Diploma Programme and Cambridge A-Levels. Students become independent thinkers and leaders, prepared for top universities worldwide.</p>
+            <p><strong>Key Features:</strong> IB Diploma Programme, Cambridge A-Levels, university counseling, internships, extended essays, senior leadership positions</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section"><h4>Quick Links</h4><ul><li><a href="about-us.html">About</a></li><li><a href="academics.html">Academics</a></li><li><a href="divisions.html">Divisions</a></li><li><a href="student-life.html">Student Life</a></li></ul></div>
+                <div class="footer-section"><h4>Admissions</h4><ul><li><a href="admissions.html">Apply</a></li><li><a href="admissions.html#fees">Fees</a></li><li><a href="admissions.html">Visit</a></li></ul></div>
+                <div class="footer-section"><h4>Contact</h4><ul><li><a href="mailto:info@redbridge.uz">info@redbridge.uz</a></li><li><a href="tel:+998712345678">+998 (71) 234-5678</a></li></ul></div>
+                <div class="footer-section"><h4>Resources</h4><ul><li><a href="#">Calendar</a></li><li><a href="news.html">News</a></li><li><a href="#">Portal</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2024 Redbridge Academy</p></div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menuToggle').addEventListener('click', () => {
+            document.getElementById('navMenu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

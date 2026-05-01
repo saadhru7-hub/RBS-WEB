@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Life - Redbridge Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .content { max-width: 1400px; margin: 0 auto; padding: 3rem 2rem; }
+        .page-header { background: linear-gradient(135deg, #DC143C 0%, #B22222 100%); color: white; padding: 4rem 2rem; text-align: center; }
+        .page-header h1 { font-size: 3rem; margin-bottom: 1rem; font-weight: 900; }
+        .section { margin-bottom: 3rem; padding: 2.5rem; background: #F5F7FA; border-radius: 15px; }
+        .section h2 { color: #DC143C; font-size: 2rem; margin-bottom: 1rem; }
+        .section p { color: #555; line-height: 1.8; margin-bottom: 1rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: #DC143C; text-decoration: none; font-weight: 700; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">REDBRIDGE</div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <nav id="navbar">
+                <ul id="navMenu">
+                    <li><a href="index.html">About Us</a><ul class="dropdown"><li><a href="about-us.html">About</a></li><li><a href="about-us.html#mission">Mission</a></li></ul></li>
+                    <li><a href="academics.html">Academics</a><ul class="dropdown"><li><a href="academics.html">Overview</a></li><li><a href="academics.html#curriculum">Curriculum</a></li></ul></li>
+                    <li><a href="divisions.html">Divisions</a><ul class="dropdown"><li><a href="divisions.html#primary">Primary</a></li><li><a href="divisions.html#upper">Upper</a></li></ul></li>
+                    <li><a href="student-life.html">Student Life</a><ul class="dropdown"><li><a href="student-life.html#activities">Activities</a></li><li><a href="student-life.html#athletics">Athletics</a></li></ul></li>
+                    <li><a href="admissions.html">Admissions</a><ul class="dropdown"><li><a href="admissions.html">Process</a></li></ul></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="btn-enquiry">ENQUIRY</button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <h1>Student Life at Redbridge</h1>
+        <p>Beyond the classroom - a vibrant community</p>
+    </div>
+
+    <div class="content">
+        <a href="index.html" class="back-link">← Back to Home</a>
+
+        <div class="section">
+            <h2>Welcome to Redbridge Life</h2>
+            <p>At Redbridge Academy, student life extends far beyond the classroom. We believe in developing the whole person through meaningful relationships, diverse experiences, and opportunities for personal growth. Our vibrant community atmosphere encourages students to explore their interests, develop leadership skills, and make lasting friendships.</p>
+        </div>
+
+        <div class="section" id="activities">
+            <h2>Clubs & Activities</h2>
+            <p>With 30+ clubs and organizations, students have unlimited opportunities to pursue their passions. From academic clubs like Debate and Science Olympiad to creative pursuits like Drama, Music, and Art, there's something for everyone. Our clubs foster collaboration, develop new skills, and create meaningful friendships.</p>
+            <p><strong>Popular Activities:</strong> Student Government, Debate Club, Model UN, Robotics, Photography, Drama, Music Ensembles, Environmental Club, Entrepreneurship Club, and many more!</p>
+        </div>
+
+        <div class="section" id="athletics">
+            <h2>Athletics & Sports</h2>
+            <p>With 50+ athletic teams across all divisions, 72% of our students participate in sports. We emphasize not just athletic excellence, but also sportsmanship, teamwork, discipline, and personal integrity. Our state championship legacy reflects our commitment to athletic achievement.</p>
+            <p><strong>Sports Include:</strong> Soccer, Basketball, Volleyball, Tennis, Swimming, Track & Field, Cross Country, Baseball, Softball, and more for all skill levels.</p>
+        </div>
+
+        <div class="section" id="arts">
+            <h2>Fine Arts Programs</h2>
+            <p>From stage to studio, our arts programs provide every student the opportunity to discover and express their creativity. With professional instructors and world-class facilities, students develop artistic skills and confidence while creating work they're proud of.</p>
+            <p><strong>Programs Include:</strong> Theatre Productions, Choir, Band, Orchestra, Visual Arts, Dance, and Annual Arts Festival showcasing student talent.</p>
+        </div>
+
+        <div class="section" id="community">
+            <h2>Community & Service</h2>
+            <p>Community service is integral to life at Redbridge. Students engage in meaningful service projects locally and globally, developing empathy and understanding while making a real difference. Our commitment to service learning helps students become responsible global citizens.</p>
+            <p><strong>Service Programs:</strong> Local community partnerships, international service trips, school clean-up initiatives, peer tutoring, and support for charitable organizations.</p>
+        </div>
+
+        <div class="section">
+            <h2>Pastoral Care & Support</h2>
+            <p>We care for students' wellbeing as much as their academics. Our comprehensive counseling programs, health services, and faculty mentors provide support for every student's physical, emotional, social, and academic needs. With small classes and strong relationships, no student falls through the cracks.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section"><h4>Quick Links</h4><ul><li><a href="about-us.html">About</a></li><li><a href="academics.html">Academics</a></li><li><a href="divisions.html">Divisions</a></li></ul></div>
+                <div class="footer-section"><h4>Contact</h4><ul><li><a href="mailto:info@redbridge.uz">info@redbridge.uz</a></li><li><a href="tel:+998712345678">+998 (71) 234-5678</a></li></ul></div>
+                <div class="footer-section"><h4>Resources</h4><ul><li><a href="news.html">News</a></li><li><a href="#">Calendar</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2024 Redbridge Academy</p></div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menuToggle').addEventListener('click', () => {
+            document.getElementById('navMenu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Redbridge Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .content { max-width: 1400px; margin: 0 auto; padding: 3rem 2rem; }
+        .page-header { background: linear-gradient(135deg, #DC143C 0%, #B22222 100%); color: white; padding: 4rem 2rem; text-align: center; }
+        .page-header h1 { font-size: 3rem; margin-bottom: 1rem; font-weight: 900; }
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .news-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: all 0.3s; }
+        .news-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(220,20,60,0.2); }
+        .news-header { background: linear-gradient(135deg, #DC143C 0%, #B22222 100%); color: white; padding: 1.5rem; height: 100px; display: flex; align-items: center; }
+        .news-content { padding: 1.5rem; }
+        .news-date { color: #999; font-size: 0.85rem; margin-bottom: 0.5rem; }
+        .news-content h3 { color: #DC143C; margin-bottom: 1rem; font-size: 1.3rem; }
+        .news-content p { color: #666; line-height: 1.6; margin-bottom: 1rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: #DC143C; text-decoration: none; font-weight: 700; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">REDBRIDGE</div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <nav id="navbar">
+                <ul id="navMenu">
+                    <li><a href="index.html">About Us</a><ul class="dropdown"><li><a href="about-us.html">About</a></li></ul></li>
+                    <li><a href="academics.html">Academics</a><ul class="dropdown"><li><a href="academics.html">Overview</a></li></ul></li>
+                    <li><a href="divisions.html">Divisions</a><ul class="dropdown"><li><a href="divisions.html">Divisions</a></li></ul></li>
+                    <li><a href="student-life.html">Student Life</a><ul class="dropdown"><li><a href="student-life.html">Overview</a></li></ul></li>
+                    <li><a href="admissions.html">Admissions</a><ul class="dropdown"><li><a href="admissions.html">Process</a></li></ul></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="btn-enquiry">ENQUIRY</button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <h1>News & Updates</h1>
+        <p>Latest from Redbridge Academy</p>
+    </div>
+
+    <div class="content">
+        <a href="index.html" class="back-link">← Back to Home</a>
+
+        <div class="news-grid">
+            <div class="news-card">
+                <div class="news-header">[NEWS IMAGE PLACEHOLDER]</div>
+                <div class="news-content">
+                    <div class="news-date">May 2024</div>
+                    <h3>Graduation Ceremony 2024</h3>
+                    <p>Redbridge celebrates the graduation of our outstanding Class of 2024. 98% of graduates have been accepted to leading universities worldwide.</p>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-header">[NEWS IMAGE PLACEHOLDER]</div>
+                <div class="news-content">
+                    <div class="news-date">April 2024</div>
+                    <h3>IB Diploma Results</h3>
+                    <p>Congratulations to our IB students on achieving excellent results with above-world-average points and near 100% pass rate.</p>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-header">[NEWS IMAGE PLACEHOLDER]</div>
+                <div class="news-content">
+                    <div class="news-date">March 2024</div>
+                    <h3>Science Exhibition Success</h3>
+                    <p>Students showcase innovative projects at the annual Science Exhibition, demonstrating creativity and research excellence.</p>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-header">[NEWS IMAGE PLACEHOLDER]</div>
+                <div class="news-content">
+                    <div class="news-date">February 2024</div>
+                    <h3>Annual Arts Festival</h3>
+                    <p>Redbridge celebrates student creativity at our annual Arts Festival featuring theatre, music, visual arts, and dance performances.</p>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-header">[NEWS IMAGE PLACEHOLDER]</div>
+                <div class="news-content">
+                    <div class="news-date">January 2024</div>
+                    <h3>Athletic Championships</h3>
+                    <p>Our teams compete at regional and national level competitions, maintaining our strong tradition of athletic excellence.</p>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-header">[NEWS IMAGE PLACEHOLDER]</div>
+                <div class="news-content">
+                    <div class="news-date">December 2023</div>
+                    <h3>Community Service Initiative</h3>
+                    <p>Students participate in meaningful service projects supporting local communities and making a real difference.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section"><h4>Navigation</h4><ul><li><a href="index.html">Home</a></li><li><a href="academics.html">Academics</a></li><li><a href="admissions.html">Admissions</a></li></ul></div>
+                <div class="footer-section"><h4>Contact</h4><ul><li><a href="mailto:info@redbridge.uz">info@redbridge.uz</a></li><li><a href="tel:+998712345678">+998 (71) 234-5678</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2024 Redbridge Academy</p></div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menuToggle').addEventListener('click', () => {
+            document.getElementById('navMenu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
