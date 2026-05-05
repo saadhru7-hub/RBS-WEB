@@ -1,5 +1,29 @@
-/* ===== GLOBAL ANIMATIONS ===== */
+/* ===== GLOBAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+:root {
+    --primary-red: #DC143C;
+    --dark-red: #B22222;
+    --white: #FFFFFF;
+    --light-gray: #F5F7FA;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: white;
+}
+
+/* ===== ANIMATIONS ===== */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -23,12 +47,8 @@
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes slideInLeft {
@@ -64,12 +84,14 @@
     }
 }
 
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
+@keyframes zoomIn {
+    from {
+        transform: scale(1.1);
+        opacity: 0;
     }
-    50% {
-        transform: translateY(-10px);
+    to {
+        transform: scale(1);
+        opacity: 1;
     }
 }
 
@@ -105,17 +127,6 @@
     object-fit: cover;
     z-index: 1;
     animation: zoomIn 1.5s ease-out;
-}
-
-@keyframes zoomIn {
-    from {
-        transform: scale(1.1);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
 }
 
 .hero-overlay {
@@ -166,7 +177,6 @@
     text-align: center;
     max-width: 1000px;
     margin: 0 auto;
-    animation: fadeIn 0.8s ease-out;
 }
 
 .mission-section h2 {
@@ -207,7 +217,7 @@
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
 
-/* ===== VALUES GRID (6 Cards) ===== */
+/* ===== VALUES SECTION (6 Cards) ===== */
 .values-section {
     padding: 80px 40px;
     background: #f9f9f9;
@@ -240,7 +250,6 @@
     animation-fill-mode: both;
 }
 
-/* Stagger animation for cards */
 .value-card:nth-child(1) { animation-delay: 0s; }
 .value-card:nth-child(2) { animation-delay: 0.1s; }
 .value-card:nth-child(3) { animation-delay: 0.2s; }
@@ -287,7 +296,7 @@
     color: #333;
 }
 
-/* ===== FEATURED SECTIONS ===== */
+/* ===== FEATURED SECTIONS (ALTERNATING) ===== */
 .featured-section {
     padding: 60px 40px;
     max-width: 1200px;
@@ -309,6 +318,13 @@
 
 .featured-section-reverse {
     flex-direction: row-reverse;
+}
+
+.featured-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
 }
 
 .featured-image {
@@ -809,11 +825,6 @@
     font-size: 18px;
 }
 
-/* ===== SMOOTH SCROLLING ===== */
-html {
-    scroll-behavior: smooth;
-}
-
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .hero-content h1 {
@@ -824,6 +835,11 @@ html {
         flex-direction: column !important;
         gap: 30px;
         padding: 40px 20px;
+    }
+    
+    .featured-content {
+        flex-direction: column !important;
+        gap: 30px;
     }
     
     .featured-image {
