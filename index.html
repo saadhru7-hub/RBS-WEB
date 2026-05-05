@@ -3,872 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redbridge Academy - Excellence in Education</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary-red: #DC143C;
-            --dark-red: #B22222;
-            --light-red: #FF6B6B;
-            --white: #FFFFFF;
-            --light-gray: #F5F7FA;
-            --dark-gray: #2C3E50;
-            --text-dark: #1A1A1A;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--text-dark);
-            overflow-x: hidden;
-            background: var(--white);
-            line-height: 1.6;
-        }
-
-        /* ===== HEADER & NAVIGATION ===== */
-        header {
-            background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
-            color: white;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 8px 32px rgba(220, 20, 60, 0.2);
-        }
-
-        .header-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 900;
-            letter-spacing: 1px;
-        }
-
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 0;
-            align-items: center;
-        }
-
-        nav > ul > li {
-            position: relative;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 1rem 1.5rem;
-            display: block;
-            transition: all 0.3s ease;
-            font-size: 0.95rem;
-        }
-
-        nav > ul > li > a {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        /* Dropdown Menu */
-        .dropdown {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: white;
-            color: var(--text-dark);
-            min-width: 220px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-            border-top: 4px solid var(--primary-red);
-            border-radius: 0 0 10px 10px;
-            z-index: 1001;
-        }
-
-        nav > ul > li:hover .dropdown {
-            display: block;
-            animation: slideDown 0.3s ease;
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .dropdown li {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .dropdown a {
-            display: block;
-            padding: 0.9rem 1.5rem;
-            color: var(--text-dark);
-            border-left: 4px solid transparent;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        .dropdown a:hover {
-            background: var(--light-gray);
-            color: var(--primary-red);
-            border-left-color: var(--primary-red);
-            padding-left: 1.8rem;
-        }
-
-        .btn-enquiry {
-            background: white;
-            color: var(--primary-red);
-            padding: 0.8rem 1.8rem;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-            margin-left: 1rem;
-        }
-
-        .btn-enquiry:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(220, 20, 60, 0.3);
-            background: var(--light-gray);
-        }
-
-        /* ===== HERO SECTION ===== */
-        .hero {
-            position: relative;
-            color: white;
-            padding: 6rem 2rem;
-            min-height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
-            background-size: cover;
-            background-position: center;
-        }
-
-        /* Video Background */
-        .hero-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-        }
-
-        /* Dark Overlay for text readability */
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 2;
-        }
-
-        /* Hero Content */
-        .hero-content {
-            position: relative;
-            z-index: 3;
-            max-width: 900px;
-            text-align: center;
-            animation: fadeInUp 0.8s ease;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 900;
-            line-height: 1.1;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.95;
-            line-height: 1.7;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn-primary {
-            background: white;
-            color: var(--primary-red);
-            padding: 1rem 2.2rem;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            font-size: 0.95rem;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(220, 20, 60, 0.3);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            padding: 1rem 2.2rem;
-            border: 2.5px solid white;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            font-size: 0.95rem;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: var(--primary-red);
-            transform: translateY(-4px);
-        }
-
-        /* ===== SECTIONS ===== */
-        .section {
-            padding: 6rem 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.8rem;
-            margin-bottom: 1rem;
-            color: var(--primary-red);
-            font-weight: 900;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 3rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* ===== FEATURES ZIGZAG LAYOUT ===== */
-        .feature-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 4rem;
-            align-items: center;
-            animation: slideInProgram 0.8s ease;
-        }
-
-        .feature-row-reverse {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        .feature-row-reverse > .feature-image {
-            order: 2;
-        }
-
-        .feature-row-reverse > .feature-content {
-            order: 1;
-        }
-
-        .feature-image {
-            width: 100%;
-            height: 350px;
-            background: linear-gradient(135deg, #E8E8E8 0%, #D3D3D3 100%);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
-            font-size: 1rem;
-            font-weight: 600;
-            text-align: center;
-            padding: 2rem;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s ease;
-        }
-
-        .feature-image:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 50px rgba(220, 20, 60, 0.2);
-        }
-
-        .feature-content {
-            padding: 2rem;
-        }
-
-        .feature-content h3 {
-            font-size: 2rem;
-            color: var(--primary-red);
-            margin-bottom: 1.5rem;
-            font-weight: 900;
-        }
-
-        .feature-content p {
-            color: #666;
-            line-height: 1.8;
-            font-size: 1.05rem;
-        }
-
-        @keyframes slideInProgram {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* ===== DIVISIONS PREVIEW ===== */
-        .divisions-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .division-preview {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s ease;
-            cursor: pointer;
-        }
-
-        .division-preview:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(220, 20, 60, 0.2);
-        }
-
-        .division-header {
-            background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
-            color: white;
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .division-header h3 {
-            font-size: 1.8rem;
-            font-weight: 800;
-        }
-
-        .division-body {
-            padding: 2rem;
-        }
-
-        .division-body p {
-            color: #666;
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-        }
-
-        .division-link {
-            color: var(--primary-red);
-            text-decoration: none;
-            font-weight: 700;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-
-        .division-link:hover {
-            color: var(--dark-red);
-            transform: translateX(5px);
-        }
-
-        /* ===== FOOTER ===== */
-        footer {
-            background: var(--text-dark);
-            color: white;
-            padding: 4rem 2rem 1.5rem;
-            border-top: 4px solid var(--primary-red);
-            margin-top: 4rem;
-        }
-
-        .footer-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h4 {
-            color: var(--primary-red);
-            margin-bottom: 1rem;
-            font-weight: 800;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section a {
-            color: #ccc;
-            text-decoration: none;
-            display: block;
-            padding: 0.5rem 0;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-        }
-
-        .footer-section a:hover {
-            color: var(--primary-red);
-            transform: translateX(8px);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 1.5rem;
-            text-align: center;
-            color: #999;
-            font-size: 0.85rem;
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-
-            nav ul {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                flex-direction: column;
-                background: var(--dark-red);
-                width: 100%;
-                gap: 0;
-            }
-
-            nav ul.active {
-                display: flex;
-            }
-
-            nav > ul > li {
-                width: 100%;
-            }
-
-            nav a {
-                padding: 1rem;
-            }
-
-            .dropdown {
-                position: static;
-                display: none;
-                background: rgba(255, 255, 255, 0.1);
-                border: none;
-                box-shadow: none;
-                border-radius: 0;
-                min-width: unset;
-            }
-
-            nav > ul > li:hover .dropdown {
-                display: none;
-            }
-
-            nav > ul > li.active .dropdown {
-                display: block;
-            }
-
-            .btn-enquiry {
-                margin-left: 0;
-                width: calc(100% - 2rem);
-                margin: 0.5rem;
-            }
-
-            .hero {
-                min-height: 400px;
-                padding: 3rem 1rem;
-            }
-
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .hero-video {
-                object-fit: cover;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .btn-primary, .btn-secondary {
-                width: 100%;
-            }
-
-            /* Feature row responsive */
-            .feature-row {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .feature-row-reverse {
-                grid-template-columns: 1fr;
-            }
-
-            .feature-row-reverse > .feature-image {
-                order: 1;
-            }
-
-            .feature-row-reverse > .feature-content {
-                order: 2;
-            }
-
-            .feature-image {
-                height: 250px;
-            }
-
-            .feature-content h3 {
-                font-size: 1.5rem;
-            }
-        }
-    </style>
+    <title>Redbridge International School</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- HEADER -->
-    <header>
-        <div class="header-container">
-            <div class="logo">REDBRIDGE</div>
-            <button class="menu-toggle" id="menuToggle">☰</button>
-            <nav id="navbar">
-                <ul id="navMenu">
-                    <li>
-                        <a href="index.html">About Us</a>
-                        <ul class="dropdown">
-                            <li><a href="about-us.html">About Redbridge</a></li>
-                            <li><a href="about-us.html#mission">Our Mission</a></li>
-                            <li><a href="about-us.html#values">Our Values</a></li>
-                            <li><a href="about-us.html#leadership">Leadership</a></li>
-                            <li><a href="about-us.html#accreditations">Accreditations</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="academics.html">Academics</a>
-                        <ul class="dropdown">
-                            <li><a href="academics.html">Overview</a></li>
-                            <li><a href="academics.html#curriculum">Curriculum</a></li>
-                            <li><a href="academics.html#programs">Special Programs</a></li>
-                            <li><a href="academics.html#faculty">Faculty</a></li>
-                            <li><a href="academics.html#results">Results</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="divisions.html">Divisions</a>
-                        <ul class="dropdown">
-                            <li><a href="divisions.html#primary">Primary School</a></li>
-                            <li><a href="divisions.html#lower">Lower School</a></li>
-                            <li><a href="divisions.html#middle">Middle School</a></li>
-                            <li><a href="divisions.html#upper">Upper School</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="student-life.html">Student Life</a>
-                        <ul class="dropdown">
-                            <li><a href="student-life.html">Overview</a></li>
-                            <li><a href="student-life.html#activities">Activities</a></li>
-                            <li><a href="student-life.html#athletics">Athletics</a></li>
-                            <li><a href="student-life.html#arts">Arts</a></li>
-                            <li><a href="student-life.html#community">Community</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="admissions.html">Admissions</a>
-                        <ul class="dropdown">
-                            <li><a href="admissions.html">Process</a></li>
-                            <li><a href="admissions.html#requirements">Requirements</a></li>
-                            <li><a href="admissions.html#fees">School Fees</a></li>
-                            <li><a href="admissions.html#faqs">FAQs</a></li>
-                            <li><a href="admissions.html#contact">Contact</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-                <button class="btn-enquiry" onclick="alert('Please fill the enquiry form')">ENQUIRY</button>
-            </nav>
-        </div>
-    </header>
 
-    <!-- HERO SECTION WITH VIDEO BACKGROUND -->
-    <section class="hero">
-        <!-- Video Background -->
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="RB_Intro_01_compressed.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+<!-- ===== 1. HERO SECTION WITH VIDEO ===== -->
+<section class="hero hero-home">
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="RB_Intro_01_compressed.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>To Prepare Them For Their Future</h1>
+        <p>Excellence in Cambridge Education. Global Community. Character Development.</p>
+        <div class="hero-buttons">
+            <button class="btn btn-primary">Apply Now</button>
+            <button class="btn btn-secondary">Schedule Visit</button>
+        </div>
+    </div>
+</section>
+
+<!-- ===== 2. MISSION STATEMENT ===== -->
+<section class="mission-section">
+    <div class="mission-content">
+        <h2>EDUCATING THE MIND AND HEART</h2>
+        <p class="mission-subtitle">For Global Excellence and Character</p>
+        <p class="mission-text">
+            At Redbridge International School, we provide world-class Cambridge-based education 
+            in a nurturing, inclusive international environment. Our mission is to prepare students 
+            to excel academically, think critically, and become responsible global citizens.
+        </p>
+    </div>
+</section>
+
+<!-- ===== 3. VALUES/FEATURES (6 Cards) ===== -->
+<section class="values-section">
+    <h2>The Values of Redbridge</h2>
+    
+    <div class="values-grid">
+        <div class="value-card">
+            <img src="ac3.jpg" alt="Academic Excellence">
+            <h3>Academic Excellence</h3>
+            <p>Rigorous Cambridge curriculum with dedicated support for every learner</p>
+        </div>
         
-        <!-- Dark Overlay for readability -->
-        <div class="hero-overlay"></div>
+        <div class="value-card">
+            <img src="ac1.jpg" alt="Global Community">
+            <h3>Global Community</h3>
+            <p>Diverse, inclusive environment celebrating cultures from around the world</p>
+        </div>
         
-        <!-- Hero Content -->
-        <div class="hero-content">
-            <h1>To Prepare Them For Their Future</h1>
-            <p>Every experience and discovery is an opportunity for growth and transformation. Redbridge Academy develops well-rounded students who excel academically, athletically, and artistically.</p>
-            <div class="hero-buttons">
-                <button class="btn-primary" onclick="window.location.href='admissions.html'">Apply Now</button>
-                <button class="btn-secondary" onclick="window.location.href='admissions.html'">Schedule a Visit</button>
-            </div>
+        <div class="value-card">
+            <img src="ac4.jpg" alt="Cambridge Excellence">
+            <h3>Cambridge Excellence</h3>
+            <p>IGCSE & A-Level programs preparing students for global universities</p>
         </div>
-    </section>
-
-    <!-- FEATURES SECTION WITH ZIGZAG LAYOUT -->
-    <section class="section">
-        <h2 class="section-title">Why Choose Redbridge?</h2>
-        <p class="section-subtitle">A comprehensive education that prepares students for success</p>
         
-        <!-- Feature 1: Image Left, Content Right -->
-        <div class="feature-row">
-            <div class="feature-image">
-                [ACADEMIC EXCELLENCE IMAGE]
-            </div>
-            <div class="feature-content">
-                <h3>Academic Excellence</h3>
-                <p>Rigorous curriculum with 98% college acceptance rate. Small classes with personalized attention ensure every student reaches their potential.</p>
-            </div>
+        <div class="value-card">
+            <img src="ac5.jpg" alt="Character Development">
+            <h3>Character Development</h3>
+            <p>Focus on values, leadership, and becoming responsible citizens</p>
         </div>
-
-        <!-- Feature 2: Content Left, Image Right -->
-        <div class="feature-row feature-row-reverse">
-            <div class="feature-content">
-                <h3>Athletics & Wellness</h3>
-                <p>Over 50 sports teams with state championship legacy. 72% student participation in sports programs.</p>
-            </div>
-            <div class="feature-image">
-                [ATHLETICS & WELLNESS IMAGE]
-            </div>
+        
+        <div class="value-card">
+            <img src="ac2.jpg" alt="Innovation">
+            <h3>Innovation & Technology</h3>
+            <p>21st-century learning with integrated technology and creativity</p>
         </div>
-
-        <!-- Feature 3: Image Left, Content Right -->
-        <div class="feature-row">
-            <div class="feature-image">
-                [FINE ARTS IMAGE]
-            </div>
-            <div class="feature-content">
-                <h3>Fine Arts</h3>
-                <p>World-class facilities with professional instructors. Theatre, music, visual arts programs with annual showcases.</p>
-            </div>
+        
+        <div class="value-card">
+            <img src="ac1.jpg" alt="Holistic">
+            <h3>Holistic Education</h3>
+            <p>Athletics, arts, and extracurricular activities for well-rounded growth</p>
         </div>
+    </div>
+</section>
 
-        <!-- Feature 4: Content Left, Image Right -->
-        <div class="feature-row feature-row-reverse">
-            <div class="feature-content">
-                <h3>Global Community</h3>
-                <p>Students from diverse backgrounds. Strong sense of community with meaningful relationships and collaboration.</p>
-            </div>
-            <div class="feature-image">
-                [GLOBAL COMMUNITY IMAGE]
-            </div>
+<!-- ===== 4. FEATURED SECTIONS (Alternating) ===== -->
+
+<section class="featured-section">
+    <div class="featured-content">
+        <img src="ac2.jpg" alt="Welcome" class="featured-image featured-image-left">
+        <div class="featured-text">
+            <h2>Welcome to Our Community</h2>
+            <p>Redbridge is more than a school—it's a family. Our diverse student body, 
+               dedicated faculty, and vibrant campus create an environment where every student 
+               feels valued and supported.</p>
+            <a href="about-us.html" class="discover-link">Discover More →</a>
         </div>
+    </div>
+</section>
 
-        <!-- Feature 5: Image Left, Content Right -->
-        <div class="feature-row">
-            <div class="feature-image">
-                [INNOVATION IMAGE]
-            </div>
-            <div class="feature-content">
-                <h3>Innovation</h3>
-                <p>Cutting-edge technology combined with classical education. Modern teaching methods that inspire creativity.</p>
-            </div>
+<section class="featured-section featured-section-reverse">
+    <div class="featured-content">
+        <div class="featured-text">
+            <h2>Academic Excellence</h2>
+            <p>Our Cambridge-based curriculum challenges students to think critically, 
+               collaborate effectively, and develop a lifelong love of learning. With an 8:1 
+               student-to-teacher ratio, we ensure every student receives personalized attention.</p>
+            <a href="academics.html" class="discover-link">Discover More →</a>
         </div>
+        <img src="ac3.jpg" alt="Academics" class="featured-image featured-image-right">
+    </div>
+</section>
 
-        <!-- Feature 6: Content Left, Image Right -->
-        <div class="feature-row feature-row-reverse">
-            <div class="feature-content">
-                <h3>Character Development</h3>
-                <p>Honor code and integrity at the foundation. Leadership development programs for all students.</p>
-            </div>
-            <div class="feature-image">
-                [CHARACTER DEVELOPMENT IMAGE]
-            </div>
+<section class="featured-section">
+    <div class="featured-content">
+        <img src="ac4.jpg" alt="Cambridge" class="featured-image featured-image-left">
+        <div class="featured-text">
+            <h2>Cambridge Program</h2>
+            <p>Our IGCSE and A-Level programs are internationally recognized, preparing 
+               students for admission to top universities worldwide. Students develop critical 
+               thinking and problem-solving skills essential for success.</p>
+            <a href="academics.html" class="discover-link">Learn More →</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- DIVISIONS SECTION -->
-    <section class="section">
-        <h2 class="section-title">Our School Divisions</h2>
-        <p class="section-subtitle">Tailored education for every stage of development</p>
-        <div class="divisions-grid">
-            <div class="division-preview">
-                <div class="division-header">
-                    <h3>Primary School</h3>
-                </div>
-                <div class="division-body">
-                    <p>Ages 5-11: Building strong foundations with engaging, play-based learning that develops curiosity and essential skills.</p>
-                    <a href="divisions.html#primary" class="division-link">Learn More →</a>
-                </div>
-            </div>
-            <div class="division-preview">
-                <div class="division-header">
-                    <h3>Lower School</h3>
-                </div>
-                <div class="division-body">
-                    <p>Ages 11-14: Nurturing young scholars with rigorous academics, creative expression, and social-emotional growth.</p>
-                    <a href="divisions.html#lower" class="division-link">Learn More →</a>
-                </div>
-            </div>
-            <div class="division-preview">
-                <div class="division-header">
-                    <h3>Middle School</h3>
-                </div>
-                <div class="division-body">
-                    <p>Ages 14-16: Supporting adolescents through transformative years with personalized pathways and leadership opportunities.</p>
-                    <a href="divisions.html#middle" class="division-link">Learn More →</a>
-                </div>
-            </div>
-            <div class="division-preview">
-                <div class="division-header">
-                    <h3>Upper School</h3>
-                </div>
-                <div class="division-body">
-                    <p>Ages 16-18: Preparing college-ready leaders with advanced academics, critical thinking, and global perspective.</p>
-                    <a href="divisions.html#upper" class="division-link">Learn More →</a>
-                </div>
-            </div>
+<section class="featured-section featured-section-reverse">
+    <div class="featured-content">
+        <div class="featured-text">
+            <h2>Student Life & Activities</h2>
+            <p>Beyond academics, students thrive through athletics, arts, clubs, and 
+               community service. We believe in developing the whole person—academically, 
+               physically, socially, and emotionally.</p>
+            <a href="student-life.html" class="discover-link">Discover More →</a>
         </div>
-    </section>
+        <img src="ac5.jpg" alt="Student Life" class="featured-image featured-image-right">
+    </div>
+</section>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="academics.html">Academics</a></li>
-                        <li><a href="divisions.html">Divisions</a></li>
-                        <li><a href="student-life.html">Student Life</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Admissions</h4>
-                    <ul>
-                        <li><a href="admissions.html">Apply Now</a></li>
-                        <li><a href="admissions.html#requirements">Requirements</a></li>
-                        <li><a href="admissions.html#fees">School Fees</a></li>
-                        <li><a href="admissions.html">Schedule Visit</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="mailto:info@redbridge.uz">info@redbridge.uz</a></li>
-                        <li><a href="tel:+998712345678">+998 (71) 234-5678</a></li>
-                        <li>Tashkent, Uzbekistan</li>
-                        <li><a href="contact.html">Contact Form</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#">School Calendar</a></li>
-                        <li><a href="news.html">News & Events</a></li>
-                        <li><a href="#">Parent Portal</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Redbridge Academy. All rights reserved. | <a href="#" style="color: #999;">Privacy Policy</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
-
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-
-        // Close menu when a link is clicked
-        document.querySelectorAll('nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
-        });
-
-        // Toggle dropdown on mobile
-        document.querySelectorAll('nav > ul > li').forEach(item => {
-            item.addEventListener('click', (e) => {
-                if (window.innerWidth <= 768) {
-                    e.preventDefault();
-                    item.classList.toggle('active');
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+<!-- ===== 5. STUDENT SPOTLIGHTS ===== -->
+<section class="spotlights-section">
+    <h2>Meet Our Students</h2>
+    <p class="section-subtitle">Hear from students about their Redbridge experience</p>
+    
+    <div class="spotlights-grid">
+        <div class="spotlight-card">
+            <img src="ac5.jpg" alt="Stud
