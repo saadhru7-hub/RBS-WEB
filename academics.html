@@ -1,69 +1,450 @@
+/* ===== PAGE HERO (Used on all pages) ===== */
+.page-hero {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    margin-top: -70px;
+    padding-top: 70px;
+}
 
+.page-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: zoomIn 1.5s ease-out;
+}
 
-<!-- ===== NEW SECTIONS START HERE ===== -->
+.page-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
 
-<!-- HERO SECTION -->
-<section class="hero academics-hero">
-    <img src="ac2.jpg" alt="Welcome to Academics">
-    <div class="hero-overlay">
-        <h1>ACADEMICS</h1>
-        <p>Preparing Minds for Their Future</p>
-        <button class="cta-button">Apply Now</button>
-    </div>
-</section>
+.page-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 3;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
 
-<!-- SECTION 1: COLLABORATIVE LEARNING -->
-<section class="alternating-section">
-    <div class="section-content">
-        <img src="ac1.jpg" alt="Collaborative Learning" class="section-image-left">
-        <div class="section-text">
-            <h2>Collaborative Learning</h2>
-            <p>Our Cambridge-based curriculum emphasizes teamwork, discussion, and peer learning. Students collaborate with classmates to solve real-world problems.</p>
-            <a href="#" class="discover-link">Discover More →</a>
-        </div>
-    </div>
-</section>
+.page-hero-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
 
-<!-- SECTION 2: FOCUSED ACADEMICS -->
-<section class="alternating-section reverse">
-    <div class="section-content">
-        <div class="section-text">
-            <h2>Focused Learning</h2>
-            <p>Excellence in academics with individual attention. Our 8:1 student-to-teacher ratio ensures every student receives personalized support and guidance.</p>
-            <a href="#" class="discover-link">Discover More →</a>
-        </div>
-        <img src="ac3.jpg" alt="Focused Learning" class="section-image-right">
-    </div>
-</section>
+.page-hero-content p {
+    font-size: 20px;
+}
 
-<!-- SECTION 3: CAMBRIDGE PROGRAM -->
-<section class="alternating-section">
-    <div class="section-content">
-        <img src="ac4.jpg" alt="Cambridge Program" class="section-image-left">
-        <div class="section-text">
-            <h2>Cambridge Excellence</h2>
-            <p>Cambridge University curriculum with IGCSE & A-Level programs. Internationally recognized qualifications that prepare students for universities worldwide.</p>
-            <a href="#" class="discover-link">Learn More →</a>
-        </div>
-    </div>
-</section>
+/* ===== PAGE INTRO ===== */
+.page-intro {
+    padding: 80px 40px;
+    background: white;
+    text-align: center;
+}
 
-<!-- SECTION 4: LIBRARY & RESOURCES -->
-<section class="alternating-section reverse">
-    <div class="section-content">
-        <div class="section-text">
-            <h2>World-Class Resources</h2>
-            <p>Modern library facilities, technology-integrated learning, and dedicated study spaces. Our Learning Commons is designed to inspire inquiry and creativity.</p>
-            <a href="#" class="discover-link">Discover More →</a>
-        </div>
-        <img src="ac5.jpg" alt="Library Resources" class="section-image-right">
-    </div>
-</section>
+.page-intro-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
 
-<!-- CALL-TO-ACTION SECTION -->
-<section class="cta-section">
-    <h2>Ready to Experience Redbridge Academics?</h2>
-    <button class="cta-button large">Schedule a Campus Tour</button>
-</section>
+.page-intro h2 {
+    font-size: 42px;
+    color: #DC143C;
+    margin-bottom: 30px;
+    animation: slideInDown 0.8s ease-out;
+}
 
-<!-- ===== NEW SECTIONS END HERE ===== -->
+.intro-text {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+/* ===== SECTION TITLE (Reusable) ===== */
+.section-title {
+    text-align: center;
+    font-size: 42px;
+    color: #DC143C;
+    margin-bottom: 60px;
+    animation: slideInDown 0.8s ease-out;
+}
+
+/* ===== CURRICULUM SECTION ===== */
+.curriculum-section {
+    padding: 80px 40px;
+    background: #f9f9f9;
+}
+
+.curriculum-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.curriculum-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px 25px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    animation: scaleIn 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.curriculum-card:nth-child(1) { animation-delay: 0s; }
+.curriculum-card:nth-child(2) { animation-delay: 0.1s; }
+.curriculum-card:nth-child(3) { animation-delay: 0.2s; }
+.curriculum-card:nth-child(4) { animation-delay: 0.3s; }
+.curriculum-card:nth-child(5) { animation-delay: 0.4s; }
+.curriculum-card:nth-child(6) { animation-delay: 0.5s; }
+
+.curriculum-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 32px rgba(220, 20, 60, 0.2);
+}
+
+.curriculum-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.curriculum-card h3 {
+    font-size: 20px;
+    color: #DC143C;
+    margin-bottom: 12px;
+}
+
+.curriculum-card p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ===== PROGRAMS SECTION ===== */
+.programs-section {
+    padding: 80px 40px;
+    background: white;
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.program-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    animation: scaleIn 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.program-card:nth-child(1) { animation-delay: 0s; }
+.program-card:nth-child(2) { animation-delay: 0.15s; }
+.program-card:nth-child(3) { animation-delay: 0.3s; }
+
+.program-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 32px rgba(220, 20, 60, 0.2);
+}
+
+.program-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.program-card:hover img {
+    transform: scale(1.1);
+}
+
+.program-card h3 {
+    font-size: 22px;
+    color: #DC143C;
+    margin: 20px 20px 10px;
+}
+
+.program-card p {
+    font-size: 15px;
+    color: #666;
+    margin: 0 20px 15px;
+    line-height: 1.6;
+}
+
+.program-link {
+    display: inline-block;
+    margin: 0 20px 20px;
+    color: #DC143C;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.program-link:after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #DC143C;
+    transition: width 0.3s ease;
+}
+
+.program-link:hover {
+    transform: translateX(5px);
+}
+
+.program-link:hover:after {
+    width: 100%;
+}
+
+/* ===== WHY CHOOSE SECTION ===== */
+.why-choose-section {
+    padding: 80px 40px;
+    background: #f9f9f9;
+}
+
+.feature-section {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.feature-section-reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+}
+
+.feature-image {
+    flex: 1;
+    border-radius: 12px;
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.feature-image:hover {
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 16px 48px rgba(220, 20, 60, 0.2);
+}
+
+.feature-text {
+    flex: 1;
+}
+
+.feature-text h3 {
+    font-size: 36px;
+    color: #DC143C;
+    margin-bottom: 20px;
+    animation: slideInLeft 0.6s ease-out;
+}
+
+.feature-text p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+/* ===== RESULTS SECTION ===== */
+.results-section {
+    padding: 80px 40px;
+    background: white;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.result-card {
+    background: white;
+    border-radius: 12px;
+    padding: 40px 25px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #DC143C;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    animation: scaleIn 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.result-card:nth-child(1) { animation-delay: 0s; }
+.result-card:nth-child(2) { animation-delay: 0.15s; }
+.result-card:nth-child(3) { animation-delay: 0.3s; }
+.result-card:nth-child(4) { animation-delay: 0.45s; }
+
+.result-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 32px rgba(220, 20, 60, 0.2);
+}
+
+.result-number {
+    font-size: 48px;
+    color: #DC143C;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.result-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.result-card p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ===== SUPPORT SECTION ===== */
+.support-section {
+    padding: 80px 40px;
+    background: #f9f9f9;
+}
+
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.support-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px 25px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    animation: scaleIn 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.support-card:nth-child(1) { animation-delay: 0s; }
+.support-card:nth-child(2) { animation-delay: 0.1s; }
+.support-card:nth-child(3) { animation-delay: 0.2s; }
+.support-card:nth-child(4) { animation-delay: 0.3s; }
+
+.support-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 32px rgba(220, 20, 60, 0.2);
+}
+
+.support-card h3 {
+    font-size: 18px;
+    color: #DC143C;
+    margin-bottom: 12px;
+}
+
+.support-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .page-hero {
+        height: 250px;
+        padding-top: 60px;
+        margin-top: -60px;
+    }
+    
+    .page-hero-content h1 {
+        font-size: 32px;
+    }
+    
+    .page-hero-content p {
+        font-size: 16px;
+    }
+    
+    .page-intro {
+        padding: 60px 20px;
+    }
+    
+    .page-intro h2 {
+        font-size: 32px;
+    }
+    
+    .curriculum-section {
+        padding: 60px 20px;
+    }
+    
+    .programs-section {
+        padding: 60px 20px;
+    }
+    
+    .why-choose-section {
+        padding: 60px 20px;
+    }
+    
+    .feature-section {
+        flex-direction: column !important;
+        gap: 30px;
+    }
+    
+    .feature-content {
+        flex-direction: column !important;
+    }
+    
+    .feature-image {
+        width: 100%;
+    }
+    
+    .feature-text {
+        width: 100%;
+    }
+    
+    .results-section {
+        padding: 60px 20px;
+    }
+    
+    .support-section {
+        padding: 60px 20px;
+    }
+    
+    .section-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+}
