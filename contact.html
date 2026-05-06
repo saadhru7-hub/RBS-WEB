@@ -3,151 +3,302 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Redbridge Academy</title>
+    <title>Contact Us - Redbridge International School</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .content { max-width: 1400px; margin: 0 auto; padding: 3rem 2rem; }
-        .page-header { background: linear-gradient(135deg, #DC143C 0%, #B22222 100%); color: white; padding: 4rem 2rem; text-align: center; }
-        .page-header h1 { font-size: 3rem; margin-bottom: 1rem; font-weight: 900; }
-        .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; }
-        .contact-info { background: #F5F7FA; padding: 2.5rem; border-radius: 15px; }
-        .contact-form { background: white; padding: 2.5rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
-        .contact-info h2 { color: #DC143C; font-size: 1.8rem; margin-bottom: 2rem; }
-        .info-item { margin-bottom: 2rem; }
-        .info-label { color: #DC143C; font-weight: 700; margin-bottom: 0.5rem; }
-        .info-content { color: #555; }
-        .form-group { margin-bottom: 1.5rem; }
-        .form-group label { display: block; color: #DC143C; font-weight: 700; margin-bottom: 0.5rem; }
-        .form-group input, .form-group textarea { width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; }
-        .form-group textarea { resize: vertical; min-height: 120px; }
-        .submit-btn { background: #DC143C; color: white; padding: 1rem 2rem; border: none; border-radius: 5px; cursor: pointer; font-weight: 700; width: 100%; }
-        .submit-btn:hover { background: #B22222; }
-        .back-link { display: inline-block; margin-bottom: 2rem; color: #DC143C; text-decoration: none; font-weight: 700; }
-        @media (max-width: 768px) {
-            .contact-container { grid-template-columns: 1fr; }
-        }
-    </style>
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <div class="logo">REDBRIDGE</div>
-            <button class="menu-toggle" id="menuToggle">☰</button>
-            <nav id="navbar">
-                <ul id="navMenu">
-                    <li><a href="index.html">About Us</a><ul class="dropdown"><li><a href="about-us.html">About</a></li></ul></li>
-                    <li><a href="academics.html">Academics</a><ul class="dropdown"><li><a href="academics.html">Overview</a></li></ul></li>
-                    <li><a href="divisions.html">Divisions</a><ul class="dropdown"><li><a href="divisions.html">Divisions</a></li></ul></li>
-                    <li><a href="student-life.html">Student Life</a><ul class="dropdown"><li><a href="student-life.html">Overview</a></li></ul></li>
-                    <li><a href="admissions.html">Admissions</a><ul class="dropdown"><li><a href="admissions.html">Process</a></li></ul></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <button class="btn-enquiry">ENQUIRY</button>
-            </nav>
+
+<!-- ===== HEADER & NAVIGATION ===== -->
+<header class="header">
+    <div class="header-container">
+        <div class="logo">
+            <h1>REDBRIDGE</h1>
         </div>
-    </header>
-
-    <div class="page-header">
-        <h1>Contact Us</h1>
-        <p>Get in touch with Redbridge Academy</p>
+        <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li class="dropdown">
+                    <a href="about-us.html">ABOUT US</a>
+                    <ul class="submenu">
+                        <li><a href="about-us.html">About Redbridge</a></li>
+                        <li><a href="about-us.html#mission">Our Mission</a></li>
+                        <li><a href="about-us.html#values">Our Values</a></li>
+                    </ul>
+                </li>
+                <li><a href="academics.html">ACADEMICS</a></li>
+                <li><a href="divisions.html">DIVISIONS</a></li>
+                <li><a href="student-life.html">STUDENT LIFE</a></li>
+                <li><a href="admissions.html">ADMISSIONS</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <button class="enquiry-btn">ENQUIRY</button>
     </div>
+</header>
 
-    <div class="content">
-        <a href="index.html" class="back-link">← Back to Home</a>
+<!-- ===== HERO BANNER ===== -->
+<section class="contact-hero">
+    <img src="ac2.jpg" alt="Contact Us Banner" class="contact-hero-img">
+    <div class="contact-hero-overlay"></div>
+    <div class="contact-hero-content">
+        <h1>Get In Touch With Us</h1>
+        <p>We're here to help answer any questions</p>
+    </div>
+</section>
 
-        <div class="contact-container">
-            <div class="contact-info">
-                <h2>Contact Information</h2>
-
-                <div class="info-item">
-                    <div class="info-label">Main Office</div>
-                    <div class="info-content">
-                        Redbridge Academy<br>
-                        Tashkent, Uzbekistan
-                    </div>
+<!-- ===== MAIN CONTACT SECTION ===== -->
+<section class="contact-main">
+    <div class="contact-container">
+        <h2 class="contact-title">Contact Us & Location</h2>
+        
+        <!-- Contact Cards Grid -->
+        <div class="contact-cards-grid">
+            
+            <!-- General Enquiries -->
+            <div class="contact-card">
+                <div class="contact-card-header">
+                    <h3>General Enquiries</h3>
                 </div>
-
-                <div class="info-item">
-                    <div class="info-label">Phone</div>
-                    <div class="info-content">
-                        <a href="tel:+998712345678" style="color: #DC143C;">+998 (71) 234-5678</a>
-                    </div>
-                </div>
-
-                <div class="info-item">
-                    <div class="info-label">Email</div>
-                    <div class="info-content">
-                        <a href="mailto:info@redbridge.uz" style="color: #DC143C;">info@redbridge.uz</a><br>
-                        <a href="mailto:admissions@redbridge.uz" style="color: #DC143C;">admissions@redbridge.uz</a>
-                    </div>
-                </div>
-
-                <div class="info-item">
-                    <div class="info-label">Office Hours</div>
-                    <div class="info-content">
+                <div class="contact-card-body">
+                    <p class="contact-label">Address:</p>
+                    <p class="contact-text">
+                        Redbridge International School<br>
+                        Samarkand, Uzbekistan
+                    </p>
+                    <p class="contact-label">Phone:</p>
+                    <p class="contact-text">
+                        <a href="tel:+998712345678">+998 (71) 234-5678</a>
+                    </p>
+                    <p class="contact-label">Email:</p>
+                    <p class="contact-text">
+                        <a href="mailto:info@redbridge.uz">info@redbridge.uz</a>
+                    </p>
+                    <p class="contact-label">Office Hours:</p>
+                    <p class="contact-text">
                         Monday - Friday: 8:00 AM - 5:00 PM<br>
                         Saturday & Sunday: Closed
-                    </div>
-                </div>
-
-                <div class="info-item">
-                    <div class="info-label">Quick Links</div>
-                    <div class="info-content">
-                        <a href="admissions.html" style="color: #DC143C; display: block; margin-bottom: 0.5rem;">Admissions</a>
-                        <a href="admissions.html#fees" style="color: #DC143C; display: block;">School Fees</a>
-                    </div>
+                    </p>
                 </div>
             </div>
 
-            <div class="contact-form">
-                <h2>Send us a Message</h2>
-                <form onsubmit="event.preventDefault(); alert('Thank you for your message. We will respond soon.');">
-                    <div class="form-group">
-                        <label for="name">Full Name*</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email Address*</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="subject">Subject*</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message*</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
+            <!-- Admissions -->
+            <div class="contact-card">
+                <div class="contact-card-header">
+                    <h3>Admissions</h3>
+                </div>
+                <div class="contact-card-body">
+                    <p class="contact-label">Admissions Director</p>
+                    <p class="contact-text">
+                        <strong>Phone:</strong><br>
+                        <a href="tel:+998712345670">+998 (71) 234-5670</a>
+                    </p>
+                    <p class="contact-label">Email:</p>
+                    <p class="contact-text">
+                        <a href="mailto:admissions@redbridge.uz">admissions@redbridge.uz</a>
+                    </p>
+                    <p class="contact-info">
+                        Have questions about enrollment? Our admissions team is ready to assist you with the application process and answer any questions about our programs.
+                    </p>
+                </div>
             </div>
+
+            <!-- School Leadership -->
+            <div class="contact-card">
+                <div class="contact-card-header">
+                    <h3>School Leadership</h3>
+                </div>
+                <div class="contact-card-body">
+                    <p class="contact-label">Principal's Office</p>
+                    <p class="contact-text">
+                        <strong>Phone:</strong><br>
+                        <a href="tel:+998712345678">+998 (71) 234-5678</a>
+                    </p>
+                    <p class="contact-label">Email:</p>
+                    <p class="contact-text">
+                        <a href="mailto:principal@redbridge.uz">principal@redbridge.uz</a>
+                    </p>
+                    <p class="contact-info">
+                        For matters related to school leadership or administrative concerns, please contact our principal's office.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Academic Affairs -->
+            <div class="contact-card">
+                <div class="contact-card-header">
+                    <h3>Academic Affairs</h3>
+                </div>
+                <div class="contact-card-body">
+                    <p class="contact-label">Academic Director</p>
+                    <p class="contact-text">
+                        <strong>Phone:</strong><br>
+                        <a href="tel:+998712345675">+998 (71) 234-5675</a>
+                    </p>
+                    <p class="contact-label">Email:</p>
+                    <p class="contact-text">
+                        <a href="mailto:academics@redbridge.uz">academics@redbridge.uz</a>
+                    </p>
+                    <p class="contact-info">
+                        Questions about our Cambridge curriculum or academic programs? Reach out to our Academic Director.
+                    </p>
+                </div>
+            </div>
+
         </div>
     </div>
+</section>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-section"><h4>Navigation</h4><ul><li><a href="index.html">Home</a></li><li><a href="about-us.html">About</a></li><li><a href="academics.html">Academics</a></li></ul></div>
-                <div class="footer-section"><h4>Contact</h4><ul><li><a href="mailto:info@redbridge.uz">info@redbridge.uz</a></li><li><a href="tel:+998712345678">+998 (71) 234-5678</a></li></ul></div>
+<!-- ===== LOCATION SECTION ===== -->
+<section class="location-section">
+    <div class="location-container">
+        <div class="location-content">
+            <h2>Our Location</h2>
+            <p class="location-description">
+                Nestled in the historic heart of Samarkand, Uzbekistan, Redbridge International School 
+                combines world-class education with a vibrant, multicultural environment. Our campus brings 
+                together modern facilities with the rich cultural heritage of this ancient Silk Road city.
+            </p>
+            
+            <div class="location-details">
+                <div class="location-info">
+                    <h3>Our Address</h3>
+                    <p>
+                        Redbridge International School<br>
+                        Samarkand<br>
+                        Uzbekistan
+                    </p>
+                </div>
+                
+                <div class="location-info">
+                    <h3>Getting Here</h3>
+                    <p>
+                        Located in Samarkand, one of Central Asia's most historic cities.<br>
+                        Easy access to international transport links.<br>
+                        <a href="#" class="location-link">Learn more about travel options →</a>
+                    </p>
+                </div>
             </div>
-            <div class="footer-bottom"><p>&copy; 2024 Redbridge Academy</p></div>
         </div>
-    </footer>
+        
+        <!-- Map -->
+        <div class="location-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3045.8342169368826!2d67.43396!3d39.65491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ef74e821e7f6ed%3A0x8f3f5f5f5f5f5f5f!2sSamarkand%2C%20Uzbekistan!5e0!3m2!1sen!2sus!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
 
-    <script>
-        document.getElementById('menuToggle').addEventListener('click', () => {
-            document.getElementById('navMenu').classList.toggle('active');
+<!-- ===== CONTACT FORM SECTION ===== -->
+<section class="contact-form-section">
+    <div class="contact-form-container">
+        <h2>Send Us a Message</h2>
+        <p>Have a question? Fill out the form below and we'll get back to you as soon as possible.</p>
+        
+        <form class="contact-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+            </div>
+            
+            <div class="form-group full-width">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary large">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- ===== QUICK LINKS SECTION ===== -->
+<section class="quick-links-section">
+    <h2>Discover More</h2>
+    <div class="quick-links-grid">
+        <div class="quick-link-card">
+            <img src="ac3.jpg" alt="Admissions">
+            <h3>Admissions</h3>
+            <p>Learn about our application process and requirements</p>
+            <a href="admissions.html" class="quick-link-btn">Learn More →</a>
+        </div>
+        
+        <div class="quick-link-card">
+            <img src="ac4.jpg" alt="Academics">
+            <h3>Academics</h3>
+            <p>Explore our Cambridge-based curriculum</p>
+            <a href="academics.html" class="quick-link-btn">Learn More →</a>
+        </div>
+        
+        <div class="quick-link-card">
+            <img src="ac5.jpg" alt="Student Life">
+            <h3>Student Life</h3>
+            <p>Discover activities, clubs, and extracurriculars</p>
+            <a href="student-life.html" class="quick-link-btn">Learn More →</a>
+        </div>
+        
+        <div class="quick-link-card">
+            <img src="ac1.jpg" alt="About Us">
+            <h3>About Us</h3>
+            <p>Learn our mission, values, and history</p>
+            <a href="about-us.html" class="quick-link-btn">Learn More →</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta">
+    <h2>Ready to Join Redbridge?</h2>
+    <p>Schedule a campus tour or request information from our admissions team</p>
+    <div class="cta-buttons">
+        <button class="btn btn-primary large">Schedule a Tour</button>
+        <button class="btn btn-secondary large">Request Information</button>
+    </div>
+</section>
+
+<script>
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
         });
-    </script>
+    }
+    
+    // Close menu when clicking on a link
+    if (navMenu) {
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    }
+</script>
+
 </body>
 </html>
