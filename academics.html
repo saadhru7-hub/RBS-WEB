@@ -1,450 +1,284 @@
-/* ===== PAGE HERO (Used on all pages) ===== */
-.page-hero {
-    position: relative;
-    height: 400px;
-    overflow: hidden;
-    margin-top: -70px;
-    padding-top: 70px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics - Redbridge International School</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-.page-hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    animation: zoomIn 1.5s ease-out;
-}
+<!-- ===== HEADER & NAVIGATION ===== -->
+<header class="header">
+    <div class="header-container">
+        <div class="logo">
+            <h1>REDBRIDGE</h1>
+        </div>
+        <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li class="dropdown">
+                    <a href="about-us.html">ABOUT US</a>
+                    <ul class="submenu">
+                        <li><a href="about-us.html">About Redbridge</a></li>
+                        <li><a href="about-us.html#mission">Our Mission</a></li>
+                        <li><a href="about-us.html#values">Our Values</a></li>
+                    </ul>
+                </li>
+                <li><a href="academics.html">ACADEMICS</a></li>
+                <li><a href="divisions.html">DIVISIONS</a></li>
+                <li><a href="student-life.html">STUDENT LIFE</a></li>
+                <li><a href="admissions.html">ADMISSIONS</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <button class="enquiry-btn">ENQUIRY</button>
+    </div>
+</header>
 
-.page-hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 2;
-}
+<!-- ===== HERO SECTION ===== -->
+<section class="page-hero">
+    <img src="ac2.jpg" alt="Academics Banner" class="page-hero-img">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+        <h1>Academic Excellence</h1>
+        <p>Rigorous Cambridge Curriculum with Innovative Teaching Methods</p>
+    </div>
+</section>
 
-.page-hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    z-index: 3;
-    animation: fadeInUp 0.8s ease-out 0.2s both;
-}
+<!-- ===== INTRO SECTION ===== -->
+<section class="page-intro">
+    <div class="page-intro-container">
+        <h2>Our Approach to Learning</h2>
+        <p class="intro-text">
+            At Redbridge International School, we believe in creating a balanced educational experience that challenges students intellectually while nurturing their creativity and character. Our Cambridge-based curriculum combines rigorous academic standards with modern innovation, fostering critical thinking, collaboration, and a passion for lifelong learning.
+        </p>
+    </div>
+</section>
 
-.page-hero-content h1 {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-}
+<!-- ===== CURRICULUM OVERVIEW ===== -->
+<section class="curriculum-section">
+    <h2 class="section-title">Our Curriculum</h2>
+    
+    <div class="curriculum-grid">
+        <div class="curriculum-card">
+            <div class="curriculum-icon">📚</div>
+            <h3>English & Language Arts</h3>
+            <p>Comprehensive development of communication skills, literary analysis, and writing proficiency across all grade levels.</p>
+        </div>
+        
+        <div class="curriculum-card">
+            <div class="curriculum-icon">🔢</div>
+            <h3>Mathematics</h3>
+            <p>Problem-solving and critical thinking through innovative instruction from fundamentals to advanced calculus and beyond.</p>
+        </div>
+        
+        <div class="curriculum-card">
+            <div class="curriculum-icon">🧪</div>
+            <h3>Science</h3>
+            <p>Hands-on laboratory experiences and inquiry-based learning in biology, chemistry, physics, and environmental science.</p>
+        </div>
+        
+        <div class="curriculum-card">
+            <div class="curriculum-icon">🌍</div>
+            <h3>Social Studies</h3>
+            <p>Global perspectives and historical understanding through the study of cultures, civilizations, and contemporary issues.</p>
+        </div>
+        
+        <div class="curriculum-card">
+            <div class="curriculum-icon">🗣️</div>
+            <h3>World Languages</h3>
+            <p>Fluency development in Spanish, French, Mandarin and other languages with cultural immersion opportunities.</p>
+        </div>
+        
+        <div class="curriculum-card">
+            <div class="curriculum-icon">💻</div>
+            <h3>Technology & Computing</h3>
+            <p>Digital literacy, coding, and computational thinking integrated throughout the curriculum for 21st-century skills.</p>
+        </div>
+    </div>
+</section>
 
-.page-hero-content p {
-    font-size: 20px;
-}
+<!-- ===== SPECIAL PROGRAMS ===== -->
+<section class="programs-section">
+    <h2 class="section-title">Special Programs</h2>
+    
+    <div class="programs-grid">
+        <div class="program-card">
+            <img src="ac4.jpg" alt="Cambridge Program">
+            <h3>Cambridge IGCSE</h3>
+            <p>Rigorous globally recognized qualifications for secondary students ensuring college readiness and academic excellence. Students develop critical thinking and advanced problem-solving skills.</p>
+            <a href="#" class="program-link">Learn More →</a>
+        </div>
+        
+        <div class="program-card">
+            <img src="ac3.jpg" alt="A-Level Program">
+            <h3>Cambridge A-Level</h3>
+            <p>Advanced two-year programs for upper school students with above-world-average pass rates. Internationally recognized qualifications preparing students for top universities worldwide.</p>
+            <a href="#" class="program-link">Learn More →</a>
+        </div>
+        
+        <div class="program-card">
+            <img src="ac5.jpg" alt="AP Program">
+            <h3>Advanced Placement (AP)</h3>
+            <p>College-level courses allowing students to earn university credit and demonstrate subject mastery. Rigorous curriculum bridging secondary and university education.</p>
+            <a href="#" class="program-link">Learn More →</a>
+        </div>
+    </div>
+</section>
 
-/* ===== PAGE INTRO ===== */
-.page-intro {
-    padding: 80px 40px;
-    background: white;
-    text-align: center;
-}
+<!-- ===== WHY CHOOSE REDBRIDGE ACADEMICS ===== -->
+<section class="why-choose-section">
+    <h2 class="section-title">Why Choose Redbridge Academics</h2>
+    
+    <div class="feature-section">
+        <div class="feature-content">
+            <img src="ac1.jpg" alt="Collaborative Learning" class="feature-image feature-image-left">
+            <div class="feature-text">
+                <h3>Small Class Sizes</h3>
+                <p>
+                    With an 8:1 student-to-teacher ratio, our educators know each student personally. This allows for individualized attention, personalized learning plans, and meaningful relationships that foster academic growth and personal development.
+                </p>
+                <a href="#" class="discover-link">Learn More →</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="feature-section feature-section-reverse">
+        <div class="feature-content">
+            <div class="feature-text">
+                <h3>Expert Faculty</h3>
+                <p>
+                    Our teachers are subject matter experts with advanced degrees and years of teaching experience. They participate in continuous professional development to stay current with educational best practices and pedagogical innovations.
+                </p>
+                <a href="#" class="discover-link">Learn More →</a>
+            </div>
+            <img src="ac3.jpg" alt="Expert Faculty" class="feature-image feature-image-right">
+        </div>
+    </div>
+    
+    <div class="feature-section">
+        <div class="feature-content">
+            <img src="ac5.jpg" alt="Modern Facilities" class="feature-image feature-image-left">
+            <div class="feature-text">
+                <h3>Modern Facilities & Resources</h3>
+                <p>
+                    State-of-the-art science laboratories, a comprehensive library with digital resources, computer labs with modern technology, and dedicated study spaces support our commitment to excellence in education.
+                </p>
+                <a href="#" class="discover-link">Learn More →</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="feature-section feature-section-reverse">
+        <div class="feature-content">
+            <div class="feature-text">
+                <h3>Global Perspective</h3>
+                <p>
+                    Our diverse student body from around the world creates a truly international learning environment. We incorporate global perspectives into our curriculum and foster cultural awareness and international mindedness.
+                </p>
+                <a href="#" class="discover-link">Learn More →</a>
+            </div>
+            <img src="ac1.jpg" alt="Global Community" class="feature-image feature-image-right">
+        </div>
+    </div>
+</section>
 
-.page-intro-container {
-    max-width: 900px;
-    margin: 0 auto;
-}
+<!-- ===== ACADEMIC RESULTS ===== -->
+<section class="results-section">
+    <h2 class="section-title">Our Academic Results</h2>
+    
+    <div class="results-grid">
+        <div class="result-card">
+            <div class="result-number">98%</div>
+            <h3>College Acceptance Rate</h3>
+            <p>Our graduates attend leading universities worldwide including Cambridge, Oxford, MIT, Stanford, and other top institutions.</p>
+        </div>
+        
+        <div class="result-card">
+            <div class="result-number">42+</div>
+            <h3>Average Points (A-Level)</h3>
+            <p>Consistently above-world-average results in Cambridge A-Level examinations, demonstrating academic excellence.</p>
+        </div>
+        
+        <div class="result-card">
+            <div class="result-number">95%</div>
+            <h3>IGCSE Pass Rate</h3>
+            <p>Outstanding performance in Cambridge IGCSE qualifications, with students achieving grades A* and A across subjects.</p>
+        </div>
+        
+        <div class="result-card">
+            <div class="result-number">90%</div>
+            <h3>AP Excellence</h3>
+            <p>High AP exam scores with students earning college credit and demonstrating subject mastery at the highest levels.</p>
+        </div>
+    </div>
+</section>
 
-.page-intro h2 {
-    font-size: 42px;
-    color: #DC143C;
-    margin-bottom: 30px;
-    animation: slideInDown 0.8s ease-out;
-}
+<!-- ===== ACADEMIC SUPPORT ===== -->
+<section class="support-section">
+    <h2 class="section-title">Comprehensive Academic Support</h2>
+    
+    <div class="support-grid">
+        <div class="support-card">
+            <h3>🎓 College Counseling</h3>
+            <p>Personalized guidance for university applications and career planning, helping students find the right fit for their future.</p>
+        </div>
+        
+        <div class="support-card">
+            <h3>📖 Tutoring & Intervention</h3>
+            <p>Additional support programs for students who need extra help, ensuring no one is left behind in their academic journey.</p>
+        </div>
+        
+        <div class="support-card">
+            <h3>🏆 Enrichment Programs</h3>
+            <p>Advanced coursework and extension opportunities for high-achieving students to deepen their knowledge and skills.</p>
+        </div>
+        
+        <div class="support-card">
+            <h3>🧠 Learning Resources</h3>
+            <p>Access to digital databases, online learning platforms, and research tools to support independent study and learning.</p>
+        </div>
+    </div>
+</section>
 
-.intro-text {
-    font-size: 18px;
-    color: #333;
-    line-height: 1.8;
-    animation: fadeInUp 0.8s ease-out 0.2s both;
-}
+<!-- ===== CTA SECTION ===== -->
+<section class="final-cta">
+    <h2>Ready to Experience Academic Excellence?</h2>
+    <p>Schedule a campus tour to see our facilities and meet our faculty</p>
+    <div class="cta-buttons">
+        <button class="btn btn-primary large">Schedule a Tour</button>
+        <button class="btn btn-secondary large">Request Information</button>
+    </div>
+</section>
 
-/* ===== SECTION TITLE (Reusable) ===== */
-.section-title {
-    text-align: center;
-    font-size: 42px;
-    color: #DC143C;
-    margin-bottom: 60px;
-    animation: slideInDown 0.8s ease-out;
-}
-
-/* ===== CURRICULUM SECTION ===== */
-.curriculum-section {
-    padding: 80px 40px;
-    background: #f9f9f9;
-}
-
-.curriculum-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.curriculum-card {
-    background: white;
-    border-radius: 12px;
-    padding: 30px 25px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    animation: scaleIn 0.6s ease-out;
-    animation-fill-mode: both;
-}
-
-.curriculum-card:nth-child(1) { animation-delay: 0s; }
-.curriculum-card:nth-child(2) { animation-delay: 0.1s; }
-.curriculum-card:nth-child(3) { animation-delay: 0.2s; }
-.curriculum-card:nth-child(4) { animation-delay: 0.3s; }
-.curriculum-card:nth-child(5) { animation-delay: 0.4s; }
-.curriculum-card:nth-child(6) { animation-delay: 0.5s; }
-
-.curriculum-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 12px 32px rgba(220, 20, 60, 0.2);
-}
-
-.curriculum-icon {
-    font-size: 48px;
-    margin-bottom: 15px;
-}
-
-.curriculum-card h3 {
-    font-size: 20px;
-    color: #DC143C;
-    margin-bottom: 12px;
-}
-
-.curriculum-card p {
-    font-size: 15px;
-    color: #666;
-    line-height: 1.6;
-    margin: 0;
-}
-
-/* ===== PROGRAMS SECTION ===== */
-.programs-section {
-    padding: 80px 40px;
-    background: white;
-}
-
-.programs-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.program-card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    animation: scaleIn 0.6s ease-out;
-    animation-fill-mode: both;
-}
-
-.program-card:nth-child(1) { animation-delay: 0s; }
-.program-card:nth-child(2) { animation-delay: 0.15s; }
-.program-card:nth-child(3) { animation-delay: 0.3s; }
-
-.program-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 12px 32px rgba(220, 20, 60, 0.2);
-}
-
-.program-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.program-card:hover img {
-    transform: scale(1.1);
-}
-
-.program-card h3 {
-    font-size: 22px;
-    color: #DC143C;
-    margin: 20px 20px 10px;
-}
-
-.program-card p {
-    font-size: 15px;
-    color: #666;
-    margin: 0 20px 15px;
-    line-height: 1.6;
-}
-
-.program-link {
-    display: inline-block;
-    margin: 0 20px 20px;
-    color: #DC143C;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.program-link:after {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #DC143C;
-    transition: width 0.3s ease;
-}
-
-.program-link:hover {
-    transform: translateX(5px);
-}
-
-.program-link:hover:after {
-    width: 100%;
-}
-
-/* ===== WHY CHOOSE SECTION ===== */
-.why-choose-section {
-    padding: 80px 40px;
-    background: #f9f9f9;
-}
-
-.feature-section {
-    max-width: 1200px;
-    margin: 0 auto 60px;
-    display: flex;
-    align-items: center;
-    gap: 50px;
-}
-
-.feature-section-reverse {
-    flex-direction: row-reverse;
-}
-
-.feature-content {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    width: 100%;
-}
-
-.feature-image {
-    flex: 1;
-    border-radius: 12px;
-    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-
-.feature-image:hover {
-    transform: scale(1.05) translateY(-10px);
-    box-shadow: 0 16px 48px rgba(220, 20, 60, 0.2);
-}
-
-.feature-text {
-    flex: 1;
-}
-
-.feature-text h3 {
-    font-size: 36px;
-    color: #DC143C;
-    margin-bottom: 20px;
-    animation: slideInLeft 0.6s ease-out;
-}
-
-.feature-text p {
-    font-size: 18px;
-    color: #333;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    animation: fadeInUp 0.6s ease-out 0.2s both;
-}
-
-/* ===== RESULTS SECTION ===== */
-.results-section {
-    padding: 80px 40px;
-    background: white;
-}
-
-.results-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.result-card {
-    background: white;
-    border-radius: 12px;
-    padding: 40px 25px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-top: 4px solid #DC143C;
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    animation: scaleIn 0.6s ease-out;
-    animation-fill-mode: both;
-}
-
-.result-card:nth-child(1) { animation-delay: 0s; }
-.result-card:nth-child(2) { animation-delay: 0.15s; }
-.result-card:nth-child(3) { animation-delay: 0.3s; }
-.result-card:nth-child(4) { animation-delay: 0.45s; }
-
-.result-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 12px 32px rgba(220, 20, 60, 0.2);
-}
-
-.result-number {
-    font-size: 48px;
-    color: #DC143C;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.result-card h3 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 12px;
-}
-
-.result-card p {
-    font-size: 15px;
-    color: #666;
-    line-height: 1.6;
-    margin: 0;
-}
-
-/* ===== SUPPORT SECTION ===== */
-.support-section {
-    padding: 80px 40px;
-    background: #f9f9f9;
-}
-
-.support-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.support-card {
-    background: white;
-    border-radius: 12px;
-    padding: 30px 25px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    animation: scaleIn 0.6s ease-out;
-    animation-fill-mode: both;
-}
-
-.support-card:nth-child(1) { animation-delay: 0s; }
-.support-card:nth-child(2) { animation-delay: 0.1s; }
-.support-card:nth-child(3) { animation-delay: 0.2s; }
-.support-card:nth-child(4) { animation-delay: 0.3s; }
-
-.support-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 12px 32px rgba(220, 20, 60, 0.2);
-}
-
-.support-card h3 {
-    font-size: 18px;
-    color: #DC143C;
-    margin-bottom: 12px;
-}
-
-.support-card p {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.6;
-    margin: 0;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-    .page-hero {
-        height: 250px;
-        padding-top: 60px;
-        margin-top: -60px;
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
     }
     
-    .page-hero-content h1 {
-        font-size: 32px;
+    if (navMenu) {
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
     }
-    
-    .page-hero-content p {
-        font-size: 16px;
-    }
-    
-    .page-intro {
-        padding: 60px 20px;
-    }
-    
-    .page-intro h2 {
-        font-size: 32px;
-    }
-    
-    .curriculum-section {
-        padding: 60px 20px;
-    }
-    
-    .programs-section {
-        padding: 60px 20px;
-    }
-    
-    .why-choose-section {
-        padding: 60px 20px;
-    }
-    
-    .feature-section {
-        flex-direction: column !important;
-        gap: 30px;
-    }
-    
-    .feature-content {
-        flex-direction: column !important;
-    }
-    
-    .feature-image {
-        width: 100%;
-    }
-    
-    .feature-text {
-        width: 100%;
-    }
-    
-    .results-section {
-        padding: 60px 20px;
-    }
-    
-    .support-section {
-        padding: 60px 20px;
-    }
-    
-    .section-title {
-        font-size: 32px;
-        margin-bottom: 40px;
-    }
-}
+</script>
+
+</body>
+</html>
