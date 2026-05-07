@@ -2117,3 +2117,63 @@ body {
         margin-bottom: 40px;
     }
 }
+/* ===== INSTAGRAM FEED SECTION ===== */
+.instagram-feed-section {
+    padding: 80px 40px;
+    background: #f9f9f9;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.instagram-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.instagram-subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 50px;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.instagram-embed-wrapper {
+    width: 100%;
+    margin-bottom: 50px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    animation: scaleIn 0.8s ease-out 0.3s both;
+}
+
+.instagram-iframe {
+    max-width: 600px !important;
+    margin: 0 auto !important;
+    display: block !important;
+}
+
+.instagram-cta {
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.instagram-cta p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .instagram-feed-section {
+        padding: 60px 20px;
+    }
+    
+    .instagram-embed-wrapper {
+        margin-bottom: 40px;
+    }
+    
+    .instagram-cta p {
+        font-size: 16px;
+    }
+}
